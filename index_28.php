@@ -8,9 +8,8 @@
 <title>中国急性心肌梗死救治项目</title>
 
 <link href="css/base.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="css/zzsc.css" type="text/css" />
-<link type="text/css" href="css/flexslider.min.css" rel="stylesheet" />
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="css/base.css" rel="stylesheet" type="text/css">
 
 <!-- <script src="/js/jquery.min.js"></script> -->
@@ -34,7 +33,21 @@
         
         
     </div>
-	<div class="logo"><a href="http://www.chinastemi.com"><img src="img/logo.png" /></a></div>
+	<div class="logo"><a href="http://www.chinastemi.com"><img src="img/logo370.png" width="100%" height="100%"/></a>
+    </div>
+    <div class="title">
+    	<p >中国胸痛管理中心网</p>
+    </div>
+    <div class="search-box">
+    	<form class="search-form">
+        	<input type="text" class="form-control"
+            placeholder="站内搜索">
+            <button class="btn btn-link search-btn">
+            <i class="glyphicon glyphicon-search"></i>
+            </button>
+        </form>
+    </div>
+    
 </div>
 <div class="mainnav1">
 
@@ -61,14 +74,13 @@
         	<a href="#" data-toggle="dropdown" aria-expanded="true" aria-haspopup="true" type="button" style="color:white; padding-left:20px">培训
             <span class="caret"></span></a>
                <ul class="dropdown-menu">
-                <li><a href="#">最新日程</a></li>
-                <li><a href="#">培训动态</a></li>
-                <li><a href="#">课程一览</a></li>
-                <li><a href="#">讲师申请</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Specials</li>
-                <li><a href="#">Lunch Buffet</a></li>
-                <li><a href="#">Weekend Brunch</a></li>
+                <li><a href="underConstruction.html">最新日程</a></li>
+                <li><a href="underConstruction.html">培训动态</a></li>
+                <li><a href="underConstruction.html">课程一览</a></li>
+                <li><a href="underConstruction.html">讲师申请</a></li>
+                <!--<li role="separator" class="divider"></li>
+                -->
+           
             </ul>
             </li>
 
@@ -77,10 +89,10 @@
             aria-haspopup="true" aria-expanded="true" style="color:white; padding-left:20px">质控 <span class="caret"></span>
             </a>
         	<ul class="dropdown-menu">
-            	<li><a href="https://www.baidu.com">质控指标</a></li>
-                <li><a href="#">统计分析</a></li>
-                <li><a href="#">我的质控</a></li>
-                <li><a href="#">科研课题</a></li>
+            	<li><a href="underConstruction.html">质控指标</a></li>
+                <li><a href="underConstruction.html">统计分析</a></li>
+                <li><a href="underConstruction.html">我的质控</a></li>
+                <li><a href="underConstruction.html">科研课题</a></li>
                 	
             
             </ul>
@@ -88,10 +100,11 @@
         <li class="dropdown" style="width:16%;height:44px;padding-left:20px;"><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" 
         aria-haspopup="true" style="color:white;padding-left:20px">发展动态<span class="caret"></span></a>
         	<ul class="dropdown-menu">
-            	<li><a href="http://map.baidu.com/">认证地图</a></li>
-                <li><a href="#">新闻事件</a></li>
-                <li><a href="#">阶段目标</a></li>
-                <li><a href="#">发展动态</a></li>
+            	
+                <li><a href="underConstruction.html">新闻事件</a></li>
+                <li><a href="underConstruction.html">认证地图</a></li>
+                <li><a href="underConstruction.html">阶段目标</a></li>
+                
             </ul>
         
         </li>
@@ -99,28 +112,28 @@
         <li class="dropdown" style="padding-left:0px"><a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="true" data-toggle="dropdown"
          role="button" style="color:white; padding-left:20px;">示范中心<span class="caret"></span></a>
         	<ul class="dropdown-menu">
-            <li><a href="#">认证标准</a></li>
-            <li><a href="#">成果展示</a></li>
-            <li><a href="#">信息化专栏</a></li>
+            <li><a href="underConstruction.html">认证标准</a></li>
+            <li><a href="underConstruction.html">成果展示</a></li>
+            <li><a href="underConstruction.html">信息化专栏</a></li>
             </ul>
         
         </li>
         <li class="dropdown" style="width:130px;height:44px;padding-left:20px;"><a href="#" class="dropdown-toggle" aria-haspopup="true" 
         aria-expanded="true" data-toggle="dropdown" role="button" style="color:white; padding-left:20px">基层胸痛<span class="caret"></span></a>
         	<ul class="dropdown-menu">
-            	<li><a href="#">认证标准</a></li>
-                <li><a href="#">基层风采</a></li>
+            	<li><a href="underConstruction.html">认证标准</a></li>
+                <li><a href="underConstruction.html">基层风采</a></li>
             </ul>
         
         </li>
-         <li class="dropdown" style="width:120px;height:44px;padding-left:20px;"><a href="#" class="dropdown-toggle" aria-haspopup="true" 
+         <li class="dropdown" style="width:130px;height:44px;padding-left:20px;"><a href="#" class="dropdown-toggle" aria-haspopup="true" 
          aria-expanded="true" data-toggle="dropdown" role="button" style="color:white;padding-left:20px;">学习天地<span class="caret"></span></a>
         	<ul class="dropdown-menu">
-        		<li><a href="#">指南共识</a></li>
-                <li><a href="#">讨论社区</a></li>
-                <li><a href="#">在线学习</a></li>
-                <li><a href="#">经验分享</a></li>
-                <li><a href="#">下载区</a></li>    
+        		<li><a href="underConstruction.html">指南共识</a></li>
+                
+                <li><a href="underConstruction.html">在线学习</a></li>
+               
+                <li><a href="underConstruction.html">下载区</a></li>    
             </ul>
         
         </li>               
@@ -156,15 +169,15 @@
     </div>
   </div>
   <a class="left carousel-control" href="#carousel1" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">前页</span></a><a class="right carousel-control" href="#carousel1" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">后页</span></a>
-  
-  </div>
+
+</div>
 
 
 
 
 </div>
 <!--header end-->
-
+	
 <!--content start-->
 <div id="container">
 
@@ -191,6 +204,7 @@
                     </div>
                    
                     	<button type="submit" class="btn btn-default btn-sm">登录</button>
+                        <a href="registrationForm.php" type="button" class="btn btn-sm btn-danger" >注册</a>
                     
                 	
                 </form>
@@ -198,9 +212,9 @@
             </div>
             
             <ul>
-            	<li><img src="img/project_img1.jpg" /><a href="/plus/list.php?tid=6" target="_parent">项目介绍</a></li>
-                <li><img src="img/project_img2.jpg" /><a href="/plus/list.php?tid=7" target="_parent">组织架构</a></li>
-            	<li><img src="img/project_img3.jpg" /><a href="/plus/list.php?tid=8" target="_parent">专家委员会</a></li>
+            	<li><img src="img/project_img1.jpg" /><a href="underConstruction.html" target="_parent">认证指引</a></li>
+                <li><img src="img/project_img2.jpg" /><a href="underConstruction.html" target="_parent">数据直报</a></li>
+            	<li><img src="img/project_img3.jpg" /><a href="underConstruction.html" target="_parent">认证地图</a></li>
             	
             </ul>
         </div>
@@ -210,25 +224,25 @@
     
     <!--center start-->
     <div class="home-new">
-        <div class="home-title"><span class="redbox"></span>大事件<span class="more"><a href="/plus/list.php?tid=1" target="_parent">
+        <div class="home-title"><span class="redbox"></span>大事件<span class="more"><a href="underConstruction.html" target="_parent">
         更多</a></span>
         </div>
     	<div class="new-img">
-            <div><a href="/plus/view.php?aid=60" target="_parent"><img src="img/1-1511301I12c21.png" width="398" height="222"/></a>
+            <div><a href="underConstruction.html" target="_parent"><img src="img/1-1511301I12c21.png" width="398" height="222"/></a>
             </div>
             <div style="width:398px; height:40px; background:#666; text-align:center; color:#FFF; line-height:40px; 
-            overflow:hidden; position:relative; margin-top:-45px; z-index:10;filter:alpha(opacity=50);  
+            overflow:hidden; position:relative; margin-top:-45px; z-index:10;filter:alpha(opacity=50);  项目
             -moz-opacity:0.50;opacity:0.50; ">完善救治网络，普及公众宣传--“心
             </div>
 
         </div>
         
         <ul class="new-ul">
-         <li><a href="/plus/view.php?aid=16" target="_parent">急性心梗急救转运处理网络医院衔接</a></li>
-<li><a href="/plus/view.php?aid=15" target="_parent">基层医院STEMI溶栓处理及溶栓后转运流程</a></li>
-<li><a href="/plus/view.php?aid=18" target="_parent">急性心梗院内绿色通道的建设和优化</a></li>
-<li><a href="/plus/view.php?aid=19" target="_parent">急诊科鉴别诊断及处理流程</a></li>
-<li><a href="/plus/view.php?aid=20" target="_parent">直接 PCI、转运PCI、补救PCI的处理要点</a></li>
+         <li><a href="underConstruction.html" target="_parent">急性心梗急救转运处理网络医院衔接</a></li>
+<li><a href="underConstruction.html" target="_parent">基层医院STEMI溶栓处理及溶栓后转运流程</a></li>
+<li><a href="underConstruction.html" target="_parent">急性心梗院内绿色通道的建设和优化</a></li>
+<li><a href="underConstruction.html" target="_parent">急诊科鉴别诊断及处理流程</a></li>
+<li><a href="underConstruction.html" target="_parent">直接 PCI、转运PCI、补救PCI的处理要点</a></li>
 
         </ul>
     </div>
@@ -238,26 +252,26 @@
     <div class="project-new">
         <div class="home-title"><span class="redbox"></span>项目动态<span class="more"><a href="/plus/list.php?tid=12" target="_parent">更多</a></span></div>
        <div class="new-wrap">
-        	<a href="/plus/view.php?aid=60" target="_parent"><img src="img/1-1511301I12c21.png" width="129" height="108" /></a>
+        	<a href="underConstruction.html60" target="_parent"><img src="img/1-1511301I12c21.png" width="129" height="108" /></a>
         	<div class="img-new">
-            	<p style="height:90px;"><a href="/plus/view.php?aid=60" target="_parent">完善救治网络，普及公众宣传--“心梗救治日”专家访谈...</a></p>
-            	<p class="jt"><a href="/plus/view.php?aid=60" target="_parent">>></a></p>
+            	<p style="height:90px;"><a href="underConstruction.html" target="_parent">完善救治网络，普及公众宣传--“心梗救治日”专家访谈...</a></p>
+            	<p class="jt"><a href="underConstruction.html" target="_parent">>></a></p>
             </div>
         </div>
         <div class="new-wrap">
-                    <a href="/plus/view.php?aid=59" target="_parent"><img src="img/1-151124093605G3.png" width="129" height="108" /></a>
+                    <a href="underConstruction.html" target="_parent"><img src="img/1-151124093605G3.png" width="129" height="108" /></a>
                     <div class="img-new">
-                        <p style="height:90px;"><a href="/plus/view.php?aid=59" target="_parent">“2015心梗救治日”活动--心梗救治体系建设初见成效...
+                        <p style="height:90px;"><a href="underConstruction.html" target="_parent">“2015心梗救治日”活动--心梗救治体系建设初见成效...
                         </a>
                         </p>
-                        <p class="jt"><a href="/plus/view.php?aid=59" target="_parent">>></a></p>
+                        <p class="jt"><a href="underConstruction.html" target="_parent">>></a></p>
                     </div>
         </div>
 
         <ul class="right-news">
-            <li><span><a href="/plus/view.php?aid=54" target="_parent">>></a></span><a href="/plus/view.php?aid=54" target="_parent">中国急性心肌梗死救治项目-辽宁</a></li>
-<li><span><a href="/plus/view.php?aid=53" target="_parent">>></a></span><a href="/plus/view.php?aid=53" target="_parent">中国急性心肌梗死救治项目-山东</a></li>
-<li><span><a href="/plus/view.php?aid=45" target="_parent">>></a></span><a href="/plus/view.php?aid=45" target="_parent">中国急性心肌梗死救治项目上海市</a></li>
+            <li><span><a href="underConstruction.html" target="_parent">>></a></span><a href="underConstruction.html" target="_parent">中国急性心肌梗死救治项目-辽宁</a></li>
+<li><span><a href="underConstruction.html" target="_parent">>></a></span><a href="underConstruction.html" target="_parent">中国急性心肌梗死救治项目-山东</a></li>
+<li><span><a href="underConstruction.html" target="_parent">>></a></span><a href="underConstruction.html45" target="_parent">中国急性心肌梗死救治项目上海市</a></li>
 
         </ul>
         <!--<div class="img-banner"><a href="http://rzmed.gensee.com/webcast/site/vod/play-1ffcdacd5bd84a4fa9c46cf113ae6ee0" target="_blank"><img src="/templets/default/images/home_img3.jpg" /></a></div>-->

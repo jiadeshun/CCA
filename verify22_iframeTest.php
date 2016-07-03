@@ -40,19 +40,19 @@
         
         
     </div>
-	<div class="logo"><a href="index_22.php"><img src="img/logo.png" /></a></div>
+	<div class="logo"><a href="index_28.php"><img src="img/logo.png" /></a></div>
 </div>
 
 <div class="mainnav">
 
 <ul>
 	<li><a href="verify22_iframeTest.php" target="_parent">认证</a></li>
-	<li><a href="/plus/list.php?tid=1" target="_parent">培训</a></li>
-	<li><a href="/plus/list.php?tid=2" target="_parent">质控</a></li>
-	<li><a href="http://data.chinastemi.com" target="_parent">发展动态</a></li>
-	<li><a href="/plus/list.php?tid=12" target="_parent">示范中心</a></li>
-	<li><a href="http://countyinstemi.chinastemi.com/" target="_parent">基层胸痛</a></li>
-	<li><a href="/plus/list.php?tid=4" target="_parent">学习天地</a></li>
+	<li><a href="underConstruction.html" target="_parent">培训</a></li>
+	<li><a href="underConstruction.html" target="_parent">质控</a></li>
+	<li><a href="underConstruction.html" target="_parent">发展动态</a></li>
+	<li><a href="underConstruction.html" target="_parent">示范中心</a></li>
+	<li><a href="underConstruction.html" target="_parent">基层胸痛</a></li>
+	<li><a href="underConstruction.html" target="_parent">学习天地</a></li>
 	<li class="nobg"><a href="aboutus.php" target="_parent">关于我们</a></li>
 </ul>
 </div>
@@ -98,14 +98,14 @@
                 <li><a href="flowIntro.html" target="content">认证流程介绍</a></li>
                 <li><a href="aims.html" target="content">认证的目的及意义</a></li>
                 <li><a href="standards.html" target="content">中国胸痛中心认证标准</a></li>
-                <li><a href="/plus/list.php?tid=11" target="content">中国胸痛中心认证基层版</a></li>
-                <li><a href="/plus/list.php?tid=11" target="content">胸痛中心建设流程图</a></li>
-                <li><a href="/plus/list.php?tid=11" target="content">认证标准和细则下载</a></li>
+                <li><a href="underConstruction.html" target="content">中国胸痛中心认证基层版</a></li>
+                <li><a href="underConstruction.html" target="content">胸痛中心建设流程图</a></li>
+                <li><a href="underConstruction.html" target="content">认证标准和细则下载</a></li>
                 <hr>
-                <li><a href="/plus/list.php?tid=11" target="_parent">监督管理制度</a></li>
+                <li><a href="underConstruction.html" target="content">监督管理制度</a></li>
                 <hr>
-                <li><a href="/plus/list.php?tid=11" target="_parent">在线机构注册</a></li>
-                <li><a href="/plus/list.php?tid=11" target="_parent">认证资质基本条件评估</a></li>
+                <li><a href="underConstruction.html" target="content">在线机构注册</a></li>
+                <li><a href="underConstruction.html" target="content">认证资质基本条件评估</a></li>
                 
                 
                 
@@ -115,7 +115,7 @@
          </div>
          <div class="about-right">
             <div class="title-wrap">
-                <div class="breadcrumb">您的位置：<a href="index_22.php">主页</a> > <a href="">认证</a>
+                <div class="breadcrumb">您的位置：<a href="index_28.php">主页</a> > <a href="verify22_iframeTest.php">认证</a>
                 </div> 
                 
                 <div class="title">认证

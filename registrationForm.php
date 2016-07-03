@@ -9,11 +9,26 @@
 
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<script src="js/md5.min.js">
+</script>
 
-
+   
 </head>
 
 <body>
+
+<?php
+$emailErr = $pssdERR ="";
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
+	
+	if(empty($_POST["input-password"])){
+		
+		;
+		
+		}
+	
+	}
+?>
 <div class="container" style="padding:50px; width:70%">
     <div class="row">
         <form action="app/register.php" class="form-horizontal" role="form" method="post" name="login-form" onSubmit="return checkForm()">
@@ -198,7 +213,7 @@
                 
                 <div class="col-sm-4">
                 	<input type="password" class="form-control" id="input-password" placeholder="请输入密码">
-                    <input type="hidden" name="password" id="md5-password">
+                    <input type="hidden" name="md5-password" id="md5-password">
                 </div>
             </div>
             <div class="form-group">
@@ -218,13 +233,19 @@
             
             <div class="form-group" style="margin-left:170px">
             	 <button type="submit" class="btn btn-twitter">提交</button>
+                 
             </div>
             
                                           
         
         </form>
     </div>
-    <script>
+
+
+    
+
+</div> 
+<script>
 	'user strict'
     	function checkForm(){
 			
@@ -234,16 +255,18 @@
 			var input_pwd_confirm = document.getElementById('input-password-comfirm');
 			var repEmail = document.getElementById('repEmail');
 			var email = document.getElementById('email');
-			var regPwd = /^\.{6,10}$/;
+			var regPwd = /^[a-zA-Z]\w{3,14}$/;
 			var regEmail = /^(\w+\.?\w+)(\@\w+\.\w+)$/;
 			
 			
 			
 			//turn input-password to md5
-			md5_pwd.value = toMD5(input_pwd.value);
+			md5_pwd.value = md5(input_pwd.value);
+			alert( md5_pwd.value);
 			
-			if(!reg.test(input_pwd.value)) {
+			if(!regPwd.test(input_pwd.value)) {
 				
+				error.innerText = "密码为3-14位字符或者数字，首字母非数字";
 				alert ("Illegal password! Must btw 6-10 characters.");
 				return false;
 				}
@@ -255,7 +278,7 @@
 				return false;
 				
 				}
-			if( !(regEmail.test(regEmail) && regEmail.test(email)) ) {
+			if( !(regEmail.test(regEmail) || regEmail.test(email)) ) {
 				
 				alert("Ilegal email account!");
 				return false;
@@ -267,12 +290,7 @@
 			
 			}
 
-		
-    </script>
-
-    
-
-</div>
+</script>
 	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>
