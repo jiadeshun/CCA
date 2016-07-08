@@ -47,7 +47,6 @@ print_r( $_POST );
 										'pssd' => $password,
 										'account' => $account,
 										'artificialPersonName' => $artificialPersonName,
-
 										'city' => $city,
 										'state' => $state,
 										'orgLevel' =>$orgLevel,
@@ -58,8 +57,6 @@ print_r( $_POST );
 										'respEmail' => $respEmail,
 										'contPersonName' => $contPersonName,
 										'contPhone' => $contPersonName,
-										
-										
 										]);
 				
 				echo "New Org Has been Created.";

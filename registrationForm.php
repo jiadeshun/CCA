@@ -9,36 +9,81 @@
 
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<script src="js/md5.min.js">
-</script>
+<script src="js/md5.min.js"></script>
 
-   
+
+<script language="javascript" type="text/javascript">
+    	function checkForm( ){
+			
+			var input_pwd = document.getElementById('input-password');
+			var md5_pwd = document.getElementById('md5-password');
+			
+			var input_pwd_2 = document.getElementById('input-password-2');
+			var respEmail = document.getElementById('respEmail');
+			var email = document.getElementById('email');
+			var regPwd = /^[a-zA-Z]\w{3,14}$/;
+			var regEmail = /^(\w+\.?\w+)(\@\w+\.\w+)$/;
+			alert(input_pwd_2.value);
+			
+			
+			//turn input-password to md5
+			md5_pwd.value = md5(input_pwd.value);
+			
+		
+			
+			
+			
+			if(input_pwd_2.value=="" || input_pwd_2.value == null) {
+				
+				alert("Please enter password again.");
+				return false;
+				
+				}
+
+			if(!regPwd.test(input_pwd.value)) {
+				
+				
+				alert ("Illegal password! Must btw 6-10 characters.");
+				return false;
+				}
+
+			
+			if(input_pwd.value !== input_pwd_2.value) {
+				
+				alert( "Passwords are not matched!");
+				return false;
+				
+				}
+			if( !(regEmail.test(respEmail.value) ) || !(regEmail.test(email.value) ) ) {
+				
+				alert("Ilegal email account!");
+				return false;
+				} 
+				
+				alert('ok');
+			
+			
+			
+		
+			return ture;
+			}
+
+</script>
 </head>
 
 <body>
 
-<?php
-$emailErr = $pssdERR ="";
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
-	
-	if(empty($_POST["input-password"])){
-		
-		;
-		
-		}
-	
-	}
-?>
+
 <div class="container" style="padding:50px; width:70%">
     <div class="row">
-        <form action="app/register.php" class="form-horizontal" role="form" method="post" name="login-form" onSubmit="return checkForm()">
+        <form class="form-horizontal" action="app/register.php" role="form" method="post" name="signup-form" onSubmit="return checkForm();">
             <div class="form-group">
             	<div class="col-sm-2">
                 	<label for="orgName">机构名称</label>
                 </div>
                 
                 <div class="col-sm-4">
-                	<input type="text" class="form-control" name="orgName" id="orgName" placeholder="请输入所在医疗机构名称">
+                	<input type="text" class="form-control" name="orgName" id="orgName" placeholder="请输入所在医疗机构名称" required>
                 </div>
             </div>    
             <div class="form-group">
@@ -120,7 +165,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 
                 <div class="col-sm-4">
-                	<input type="text" class="form-control" name="runDuration" id="runDuration" placeholder="请输入试运行时间">
+                	<input type="text" class="form-control" name="runDuration" id="runDuration" placeholder="请输入试运行时间" required>
                 </div>
             </div>
             <div class="form-group">
@@ -156,7 +201,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 
                 <div class="col-sm-4">
-                	<input type="email" class="form-control" name="respEmail" id="respEmail" placeholder="请输入负责人邮箱">
+                	<input type="email" class="form-control" name="respEmail" id="respEmail" placeholder="请输入负责人邮箱" required>
                 </div>
             </div>
             <div class="form-group">
@@ -185,7 +230,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 
                 <div class="col-sm-4">
-                	<input type="email" class="form-control" name="email" id="email" placeholder="请输入邮箱">
+                	<input type="email" class="form-control" name="email" id="email" placeholder="请输入邮箱" required>
                 </div>
             </div>
              <div class="form-group">
@@ -202,9 +247,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 	<label for="account">登录账号名称</label>
                 </div>
                 
-                <div class="col-sm-4">
-                	<input type="text" class="form-control" name="account" id="account" placeholder="请输入账号名">
+                <div class="col-sm-4" >
+                	<input type="text" class="form-control" name="account" id="account" placeholder="请输入账号名" required>
+                    
                 </div>
+                <div class="col-sm-2" style="margin-left:-20px; "><span style="padding-top:5px">*必填</span></div>
             </div>
              <div class="form-group">
             	<div class="col-sm-2">
@@ -212,87 +259,33 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 
                 <div class="col-sm-4">
-                	<input type="password" class="form-control" id="input-password" placeholder="请输入密码">
+                	<input type="password" class="form-control" id="input-password" placeholder="请输入密码" required>
                     <input type="hidden" name="md5-password" id="md5-password">
                 </div>
             </div>
             <div class="form-group">
             	<div class="col-sm-2">
-                	<label for="input-password-confirm">确认密码</label>
+                	<label for="input-password-2">确认密码</label>
                 </div>
                 
                 <div class="col-sm-4">
-                	<input type="password" class="form-control" name="input-password-confirm" id="input-password-confirm" placeholder="请再次输入密码">
+                	<input type="password" class="form-control" name="input-password-2" id="input-password-2" 
+                    placeholder="请再次输入密码" required>
                 </div>
             </div> 
             <div class="form-group" style="margin-left:100px">
-            	<input type="checkbox">我已认真阅读并同意 <a href="#" style="color:blue">使用条款和隐私政策</a>
-                
-               
+            	<input type="checkbox">我已认真阅读并同意 <a href="#items.html" style="color:blue">使用条款和隐私政策</a>
             </div>
             
             <div class="form-group" style="margin-left:170px">
             	 <button type="submit" class="btn btn-twitter">提交</button>
                  
-            </div>
-            
-                                          
-        
+            </div>       
         </form>
     </div>
-
-
-    
-
 </div> 
-<script>
-	'user strict'
-    	function checkForm(){
-			
-			var input_pwd = document.getElementById('input-password');
-			var md5_pwd = document.getElementById('md5-password');
-			
-			var input_pwd_confirm = document.getElementById('input-password-comfirm');
-			var repEmail = document.getElementById('repEmail');
-			var email = document.getElementById('email');
-			var regPwd = /^[a-zA-Z]\w{3,14}$/;
-			var regEmail = /^(\w+\.?\w+)(\@\w+\.\w+)$/;
-			
-			
-			
-			//turn input-password to md5
-			md5_pwd.value = md5(input_pwd.value);
-			alert( md5_pwd.value);
-			
-			if(!regPwd.test(input_pwd.value)) {
-				
-				error.innerText = "密码为3-14位字符或者数字，首字母非数字";
-				alert ("Illegal password! Must btw 6-10 characters.");
-				return false;
-				}
-			
-			
-			if(input_pwd.value !== input_pwd_confirm.value) {
-				
-				alert( "Passwords are not matched!");
-				return false;
-				
-				}
-			if( !(regEmail.test(regEmail) || regEmail.test(email)) ) {
-				
-				alert("Ilegal email account!");
-				return false;
-				}
-			
-			
-			
-			return true;
-			
-			}
 
-</script>
-	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

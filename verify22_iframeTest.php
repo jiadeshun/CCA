@@ -94,10 +94,10 @@
 		  
 
 	      <ul class="menu">
-                <li><a href="orgIntro.html" target="content">认证机构介绍</a></li>
-                <li><a href="flowIntro.html" target="content">认证流程介绍</a></li>
-                <li><a href="aims.html" target="content">认证的目的及意义</a></li>
-                <li><a href="standards.html" target="content">中国胸痛中心认证标准</a></li>
+                <li><a href="./qualityControl/orgIntro.html" target="content">认证机构介绍</a></li>
+                <li><a href="./qualityControl/flowIntro.html" target="content">认证流程介绍</a></li>
+                <li><a href="./qualityControl/aims.html" target="content">认证的目的及意义</a></li>
+                <li><a href="./qualityControl/standards.html" target="content">中国胸痛中心认证标准</a></li>
                 <li><a href="underConstruction.html" target="content">中国胸痛中心认证基层版</a></li>
                 <li><a href="underConstruction.html" target="content">胸痛中心建设流程图</a></li>
                 <li><a href="underConstruction.html" target="content">认证标准和细则下载</a></li>
@@ -124,7 +124,7 @@
             </div>
              <div class="news-content">
     
-                <iframe name="content" src="orgIntro.html" frameborder="0" height="100%" width="100%"  onload="this.height=this.contentWindow.document.documentElement.scrollHeight" scrolling="no">
+                <iframe name="content" src="./qualityControl/orgIntro.html" frameborder="0" height="100%" width="100%"  onload="this.height=this.contentWindow.document.documentElement.scrollHeight" scrolling="no">
                     
                 </iframe>
             </div>

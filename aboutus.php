@@ -13,7 +13,8 @@
     <div id="header">
     
         <div class="header-top">
-            <div class="logo"><a href="http://www.chinastemi.com"><img src="img/logo.png" /></a></div>
+           	<div class="logo"><a href="http://www.chinastemi.com"><img src="img/logo370.png" width="100%" height="100%"/></a>
+    </div>
         </div>
 
         <div class="mainnav">

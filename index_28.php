@@ -1,4 +1,4 @@
-
+ 
 <!doctype html>
 <html>
 <head>
@@ -15,6 +15,17 @@
 <!-- <script src="/js/jquery.min.js"></script> -->
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/md5.min.js"></script>	
+<style>
+
+.load{
+background-image:url(loader.gif);
+background-position:right;
+background-repeat:no-repeat;
+}
+
+
+</style>	
 
 </head>
 
@@ -33,19 +44,62 @@
         
         
     </div>
-	<div class="logo"><a href="http://www.chinastemi.com"><img src="img/logo370.png" width="100%" height="100%"/></a>
+	<div class="logo"><a href="http://www.chinastemi.com"><img src="img/logo70.png" width="100%" height="100%"/></a>
     </div>
     <div class="title">
     	<p >中国胸痛管理中心网</p>
     </div>
     <div class="search-box">
-    	<form class="search-form">
-        	<input type="text" class="form-control"
-            placeholder="站内搜索">
-            <button class="btn btn-link search-btn">
-            <i class="glyphicon glyphicon-search"></i>
-            </button>
+    
+    	<form class="search-form" id="form" action="#" method="post">
+          <div class="search" style="display:inline">
+                <input type="text" class="form-control" name="country" id="country" onkeyup="suggest(this.value)" 
+                onblur="fill();" value="">
+                <button class="btn btn-link search-btn" id="searchSubmit">
+                
+                </button>
+            
+            </div>
+        	
+          <div id="suggestions" class="suggestionsBox" style="display:none;">
+            	               
+                <div id="suggestionList" class="suggestionList">
+                &nbsp;
+                </div>
+            </div>
+            
         </form>
+        
+        <script type="text/javascript">
+        function suggest(inputString){
+			if (inputString == 0) {
+				$('#suggestions').fadeOut();
+				} 
+			else {
+					
+				$('#country').addClass('load');
+				$.post('autoSuggest.php',{queryString: "" + inputString + ""}, function (data) {
+					
+					if(data.length > 0) {
+						
+						$('#suggestions').fadeIn();
+						$('#suggestionList').html(data);
+						$('#searchItem').removeClass('load');
+						
+						}
+					});
+				}
+			
+			}
+		function fill(value) {
+			
+			$('#country').val(value);
+			setTimeout("$('#suggestions').fadeOut();", 600);
+			
+			
+			}
+		
+        </script>
     </div>
     
 </div>
@@ -142,6 +196,7 @@
     
 
 </div>
+
 <div id="carousel1" class="carousel slide" data-ride="carousel" style="margin-top:-4px">
   <ol class="carousel-indicators">
     <li data-target="#carousel1" data-slide-to="0" class="active"></li>
@@ -149,19 +204,19 @@
     <li data-target="#carousel1" data-slide-to="2"></li>
   </ol>
   <div class="carousel-inner" role="listbox">
-    <div class="item active"><img src="images/banner.jpg" alt="First slide image" class="center-block">
+    <div class="item active"><img src="img/banner4.png" alt="First slide image" class="center-block">
       <div class="carousel-caption">
         <h3>First slide Heading</h3>
         <p>First slide Caption</p>
-      </div>
     </div>
-    <div class="item"><img src="images/banner2.jpg" alt="Second slide image" class="center-block">
+    </div>
+    <div class="item"><img src="img/banner5.png" alt="Second slide image" class="center-block">
       <div class="carousel-caption">
         <h3>Second slide Heading</h3>
         <p>Second slide Caption</p>
       </div>
     </div>
-    <div class="item"><img src="images/banner3.jpg" alt="Third slide image" class="center-block">
+    <div class="item"><img src="img/banner6.png" alt="Third slide image" class="center-block">
       <div class="carousel-caption">
         <h3>Third slide Heading</h3>
         <p>Third slide Caption</p>
@@ -190,16 +245,21 @@
             更多</a></span>
             </div>
             <div class="project-msg">
-            	<form action="#" class="form-horizontal" role="form" method="post" id="login">
+            
+            	<form action="./app/login.php" class="form-horizontal" method="post" id="login" onSubmit="return checkLogin();">
                 	<div class="form-group">
                     
                     <div class="col-sm-4"><label for="account">账户名</label></div>
-                    <div class="col-sm-7"><input type="text" class="form-control" id="account" name="account" placeholder="请输入账户名"></div>	
+                    <div class="col-sm-7"><input type="text" class="form-control" id="account" name="account" placeholder="请输入账户名"required></div>	
                         
                     </div>
                     <div class="form-group">
                     <div class="col-sm-4"><label for="password">密码</label></div>
-                    <div class="col-sm-7"><input type="password" class="form-control" id="account" name="password" placeholder="请输入密码"></div>
+                    <div class="col-sm-7">
+                    <input type="password" class="form-control" id="password" placeholder="请输入密码" required>
+                    <input type="hidden" id="md5-password" name="password">
+                    
+                    </div>
                     
                     </div>
                    
@@ -208,6 +268,39 @@
                     
                 	
                 </form>
+                <script type="text/javascript" language="javascript">
+					
+					function checkLogin() {
+						
+						var input_pssd = document.getElementById('password');
+						var md5_pssd = document.getElementById('md5-password');
+						var account = document.getElementById('account');
+					
+						alert(input_pssd.value);
+					
+						if (input_pssd.value == "" || input_pssd.value == null) {
+							alert("Passwords illegal");
+							
+							return false;
+							
+							}
+						
+						if (account.value == "" || account.value == null ) {
+							
+							alert("Account illegal.")
+							
+							return false;
+							
+							}
+						md5_pssd.value = md5(input_pssd.value);
+						alert(md5_pssd.value);			
+							
+							return true;
+						
+					}
+					
+					
+					</script>
                 
             </div>
             

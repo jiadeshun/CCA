@@ -12,12 +12,12 @@ a:hover{text-decoration:underline}
 .homebg{background:url(../images/content_bg.png) no-repeat center 355px}
 /* header */
 #header{width:1100px;height:auto;margin:0 auto;overflow:hidden}
-.header-top{width:1100px;height:200px}
-.header-top .logo{float:left;width:200px;height:200px;padding-top:20px}
-.header-top .title{float:left;width:620px;height:100px;padding:60px}
-.header-top .title p {font-family:Microsoft YaHei; font-size:50px}
+.header-top{width:1100px;height:80px}
+.header-top .logo{float:left;width:78px;height:72px;padding-left:5px;padding-top:5px}
+.header-top .title{float:left;width:620px;height:70px;padding:20px}
+.header-top .title p {font-family:Microsoft YaHei; font-size:30px}
 .header-top .search-box{display:inline-block;width: 180px; height:30px;float:right; 
-						margin-right:50px;margin-top:40px;
+						margin-top:20px;
 						border-radius:3px;background:#fff;border:1px solid #ddd;
 						-webkit-transition:all 200ms ease-in-out;
 						-moz-transition:all 200ms ease-in-out;
@@ -27,6 +27,8 @@ a:hover{text-decoration:underline}
 	border:1px solid #aaa;
 	} 
 .header-top .search-box input[type=text] {
+	width:180px;
+	float:right;
 	border:none;
 	box-shadow:none;
 	display:inline-block;
@@ -35,20 +37,67 @@ a:hover{text-decoration:underline}
 	
 	}
 .header-top .search-box .search-btn{
-	
-	position:absolute;
-	right:165px;	
-	top:124px;
+	width:35px;
+	float:right;
+	position:relative;
+	margin-top:-36px;
 	color:#aaa;
 	font-size:21px;
 	-webkit-transition:ease-in-out;
 	-moz-transition:ease-in-out;
 	transition:all 200ms ease-in-out;
 	}
-	.header-top .search-box .search-btn:hover{
-		color:#fff;
-		background-color:#8FBE00;
+	
+.header-top .search-box .search-btn:hover{
+	color:#34B061;
+	/*background-color:#8FBE00;*/
+	}
+.header-top .search-box .search-form .suggestionsBox {
+	position:absolute;
+	margin:26px 0 0 0;
+	padding:0;
+	width: 180px;
+	background-color:#AAE9F1;
+	border-top: 3px solid #000;
+	color:#fff;
+		
+	}
+
+.suggestionsBox .suggestionList{
+	
+	padding:0px;
+	margin:0px;
+	}
+	.suggestionsBox ul {
+		
+		font-family:Microsoft YaHei, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size:9px;
 		}
+.suggestionList ul li {
+	
+	list-style:none;
+	margin:0;
+	padding:6px;
+	border-bottom:1px dotted #666;
+	cursor:pointer;
+	
+	}
+.suggestionList ul li:hover {
+	
+	background-color: #FC3;
+	color:#000;
+}
+#result {
+	height:20px;
+	font-size:16px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#333;
+	padding:5px;
+	margin-bottom:10px;
+	background-color:#FFFF99;
+}
+	
+	
 .header-top .top-right{float:right;width:216px;height:88px;padding-top:25px}
 .header-top .top-right .top-link{width:205px;height:21px;padding-top:6px;padding-right:3px;padding-bottom:12px;color:#919191;line-height:16px;text-align:right}
 .header-top .top-right .top-link span{display:block;float:right;width:50px;height:20px;padding-right:3px;background:url(../images/top_right_x.jpg) no-repeat 15px 4px;text-align:right;line-height:20px}
@@ -272,3 +321,5 @@ color:#595757;line-height:30px}
 .hzlogo img{ padding:10px; float:left;}
 
 .hynew-page a{padding-right:10px;display:block;float:left;}
+
+
