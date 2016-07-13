@@ -6,7 +6,7 @@ ul,li{list-style-type:none}
 h1,h2,h3,h4,h5{margin:0;padding:0;font-weight:normal}
 img{border:none}
 a{text-decoration:none}
-a:hover{text-decoration:underline}
+/*a:hover{text-decoration:underline}*/
 /* wrapper */
 #wrapper{width:100%;max-width:1440px;height:auto;overflow:hidden}
 .homebg{background:url(../images/content_bg.png) no-repeat center 355px}
@@ -68,7 +68,7 @@ a:hover{text-decoration:underline}
 	padding:0px;
 	margin:0px;
 	}
-	.suggestionsBox ul {
+.suggestionsBox ul {
 		
 		font-family:Microsoft YaHei, Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-size:9px;
@@ -123,6 +123,7 @@ background: linear-gradient(#ac0007, #e50012);-pie-background: linear-gradient(#
 	width:1100px;height:44px;background:#1E5DB1;
 
 }
+.mainnav1 ul li a:hover {color:#zD31F22} 
 
 .mainnav ul{display:block;width:1060px;height:44px;padding-left:6px;margin:0 auto}
 .mainnav ul li{display:block;float:left;width:130px;height:44px;padding-right:2px;background:url(../images/mainnav_x.jpg) no-repeat right top;

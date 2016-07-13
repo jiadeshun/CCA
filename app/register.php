@@ -3,14 +3,8 @@
 require_once 'init.php';
 
 print_r( $_POST );
-	
-	if ($_POST['orgName']=='' || $_POST['md5-password']==''|| $_POST['account']=='') {
-		
-		
-		echo ("Please enter orgName/password/account");
-		
-		
-	} else {
+
+
 			
 			
 			try {
@@ -71,7 +65,7 @@ print_r( $_POST );
 					
 					
 		
-		}
+
 	
 	//header('Location: ./verify.php');
 ?>

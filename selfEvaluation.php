@@ -35,7 +35,7 @@ body {
 
 </header>
 
-<!--<div class="container">
+
 
     example progress bar
     <div class="progress">
@@ -44,7 +44,7 @@ body {
       </div>
     </div>
 
-</div>-->
+
 <div class="container">
      <div class="row">
    		<p class="bg-primary col-sm-1 lead col-sm-offset-10">是 &nbsp;&nbsp;否</p>

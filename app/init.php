@@ -9,7 +9,7 @@ try {
 
 $conn = new PDO ("mysql:dbname=$DB; host=$SERVER",$USER, $PASSWORD) or die ("Cannot connect to database.");
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-echo "Connected.";
+//echo "Connected.";
 
 } catch (PDOException $e) {
 	

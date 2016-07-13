@@ -1,4 +1,18 @@
- 
+ <?php
+
+require_once('app/login.php');// Start Session and check if have the session stored.
+
+if(isset($_SESSION['login_user'])) { // if has the session called 'login_user' then 
+									// head to profile.php  
+	
+	echo "ok"; //test
+	
+//	header('Location:profile.php');
+	
+	}
+else echo "not";	// if not work
+
+?>
 <!doctype html>
 <html>
 <head>
@@ -6,7 +20,6 @@
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 <title>中国急性心肌梗死救治项目</title>
-
 <link href="css/base.css" rel="stylesheet" type="text/css">
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/bootstrap.css" rel="stylesheet" type="text/css">
@@ -19,9 +32,11 @@
 <style>
 
 .load{
-background-image:url(loader.gif);
-background-position:right;
-background-repeat:no-repeat;
+	
+	background-image:url('img/loader.gif');
+	background-position:right;
+	background-repeat:no-repeat;
+	
 }
 
 
@@ -47,19 +62,31 @@ background-repeat:no-repeat;
 	<div class="logo"><a href="http://www.chinastemi.com"><img src="img/logo70.png" width="100%" height="100%"/></a>
     </div>
     <div class="title">
-    	<p >中国胸痛管理中心网</p>
+    	
     </div>
+     <div class="">
+		<?php if($_SESSION['login_user']): ?>
+         
+         <a href="profile.php"><i class="glyphicon glyphicon-user"></i>
+       
+         <?php echo $_SESSION['login_user']; ?>
+          </a> <a href="logout.php">登出</a>
+         <?php endif ?>
+            
+     </div>
     <div class="search-box">
+
     
     	<form class="search-form" id="form" action="#" method="post">
           <div class="search" style="display:inline">
                 <input type="text" class="form-control" name="country" id="country" onkeyup="suggest(this.value)" 
-                onblur="fill();" value="">
+                onblur="fill();" value="" autocomplete="off">
                 <button class="btn btn-link search-btn" id="searchSubmit">
                 
                 </button>
             
             </div>
+
         	
           <div id="suggestions" class="suggestionsBox" style="display:none;">
             	               
@@ -263,7 +290,7 @@ background-repeat:no-repeat;
                     
                     </div>
                    
-                    	<button type="submit" class="btn btn-default btn-sm">登录</button>
+                    	<button type="submit" class="btn btn-default btn-sm" value="submit" name="submit">登录</button>
                         <a href="registrationForm.php" type="button" class="btn btn-sm btn-danger" >注册</a>
                     
                 	
@@ -317,7 +344,7 @@ background-repeat:no-repeat;
     
     <!--center start-->
     <div class="home-new">
-        <div class="home-title"><span class="redbox"></span>大事件<span class="more"><a href="underConstruction.html" target="_parent">
+        <div class="home-title"><span class="redbox"></span>大事记<span class="more"><a href="underConstruction.html" target="_parent">
         更多</a></span>
         </div>
     	<div class="new-img">
@@ -331,11 +358,11 @@ background-repeat:no-repeat;
         </div>
         
         <ul class="new-ul">
-         <li><a href="underConstruction.html" target="_parent">急性心梗急救转运处理网络医院衔接</a></li>
-<li><a href="underConstruction.html" target="_parent">基层医院STEMI溶栓处理及溶栓后转运流程</a></li>
-<li><a href="underConstruction.html" target="_parent">急性心梗院内绿色通道的建设和优化</a></li>
-<li><a href="underConstruction.html" target="_parent">急诊科鉴别诊断及处理流程</a></li>
-<li><a href="underConstruction.html" target="_parent">直接 PCI、转运PCI、补救PCI的处理要点</a></li>
+        <li><a href="underConstruction.html" target="_parent">急性心梗急救转运处理网络医院衔接</a></li>
+        <li><a href="underConstruction.html" target="_parent">基层医院STEMI溶栓处理及溶栓后转运流程</a></li>
+        <li><a href="underConstruction.html" target="_parent">急性心梗院内绿色通道的建设和优化</a></li>
+        <li><a href="underConstruction.html" target="_parent">急诊科鉴别诊断及处理流程</a></li>
+        <li><a href="underConstruction.html" target="_parent">直接 PCI、转运PCI、补救PCI的处理要点</a></li>
 
         </ul>
     </div>
@@ -343,7 +370,8 @@ background-repeat:no-repeat;
     
     <!--rightsidebar start-->
     <div class="project-new">
-        <div class="home-title"><span class="redbox"></span>项目动态<span class="more"><a href="/plus/list.php?tid=12" target="_parent">更多</a></span></div>
+        <div class="home-title"><span class="redbox"></span>会议新闻<span class="more"><a href="/plus/list.php?tid=12" target="_parent">更多</a></span>
+        </div>
        <div class="new-wrap">
         	<a href="underConstruction.html60" target="_parent"><img src="img/1-1511301I12c21.png" width="129" height="108" /></a>
         	<div class="img-new">
