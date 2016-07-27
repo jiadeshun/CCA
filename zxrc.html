@@ -1,0 +1,321 @@
+ 
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title>最新日程</title>
+
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link  href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/base.css" rel="stylesheet" type="text/css">
+
+
+
+<!-- <script src="/js/jquery.min.js"></script> -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/md5.min.js"></script> 
+<style>
+td{border-bottom:1px solid #000; height:50px;}
+.rc-title{ text-align:center; margin-top:50px;
+margin-bottom:30px;
+	}
+table{margin-bottom:100px;
+}
+
+.load{
+background-image:url(loader.gif);
+background-position:right;
+background-repeat:no-repeat;
+}
+
+
+</style>  
+
+</head>
+
+<body>
+
+<div id="wrapper" class="homebg">
+<!--header start-->
+<div id="header">
+
+<div class="header-top">
+  <div class="top-right">
+      <div class="top-link">
+          <!--<p><span><a href="zhuce.htm" target="_parent">注册</a></span><span class="nobg"><a href="denglu.htm" target="_parent">登录</a></span></p>-->
+        </div>
+
+        
+        
+    </div>
+  <div class="logo"><a href="index_28.php"><img src="img/logo.png" width="100%" height="100%"/></a>
+    </div>
+    <div class="title">
+      <p >中国胸痛中心总部</p>
+    </div>
+    <div class="search-box">
+    
+      <form class="search-form" id="form" action="#" method="post">
+          <div class="search" style="display:inline">
+                <input type="text" class="form-control" name="country" id="country" onkeyup="suggest(this.value)" 
+                onblur="fill();" value="">
+                <button class="btn btn-link search-btn" id="searchSubmit">
+                
+                </button>
+            
+            </div>
+          
+          <div id="suggestions" class="suggestionsBox" style="display:none;">
+                             
+                <div id="suggestionList" class="suggestionList">
+                &nbsp;
+                </div>
+            </div>
+            
+        </form>
+        
+        <script type="text/javascript">
+        function suggest(inputString){
+      if (inputString == 0) {
+        $('#suggestions').fadeOut();
+        } 
+      else {
+          
+        $('#country').addClass('load');
+        $.post('autoSuggest.php',{queryString: "" + inputString + ""}, function (data) {
+          
+          if(data.length > 0) {
+            
+            $('#suggestions').fadeIn();
+            $('#suggestionList').html(data);
+            $('#searchItem').removeClass('load');
+            
+            }
+          });
+        }
+      
+      }
+    function fill(value) {
+      
+      $('#country').val(value);
+      setTimeout("$('#suggestions').fadeOut();", 600);
+      
+      
+      }
+    
+        </script>
+    </div>
+    
+</div>
+<div class="mainnav1">
+
+    <ul class="navbar-nav" style="padding:5px 50px;font-family:Microsoft YaHei; font-size:20px; width:100%">
+
+        <li class="dropdown" style="width:8%;height:44px;"><a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" style="color:white;">认证<span class="caret"></span></a>
+             
+            <ul class="dropdown-menu">
+                <li><a href="verify25_iframeTest.php">认证须知</a>  
+                </li>
+                <li><a href="selfEvaluation.html">自我评估</a>
+                </li>
+                <li><a href="Phase query.html">认证申请</a>
+                </li>
+                <li><a href="Phase query.html">进度审查</a>
+                </li>
+                <li><a href="Qualification_inquiry.html">资质查询</a>
+                </li>
+            </ul>  
+               
+        </li>
+     
+        <li class="dropdown" style="width:11%;height:44px;padding-left:0px;">
+          <a href="#" data-toggle="dropdown" aria-expanded="true" aria-haspopup="true" type="button" style="color:white; padding-left:20px">培训
+            <span class="caret"></span></a>
+               <ul class="dropdown-menu">
+                <li><a href="zxrc.html">最新日程</a></li>
+                <li><a href="pxdt.html">培训动态</a></li>
+                <li><a href="kcyl.html">课程一览</a></li>
+                <li><a href="TTT.html">讲师申请</a></li>
+                <!--<li role="separator" class="divider"></li>
+                -->
+           
+            </ul>
+            </li>
+
+        <li class="dropdown" style="width:8%;height:44px;padding-left:0px;">
+            <a href="#" data-toggle="dropdown" class="dropdown-toggle" role="button"
+            aria-haspopup="true" aria-expanded="true" style="color:white; padding-left:20px">质控 <span class="caret"></span>
+            </a>
+          <ul class="dropdown-menu">
+              <li><a href="zkzb.html">质控指标</a></li>
+                <li><a href="underConstruction.html">统计分析</a></li>
+                <li><a href="underConstruction.html">我的质控</a></li>
+                <li><a href="underConstruction.html">科研课题</a></li>
+                  
+            
+            </ul>
+        </li>
+        <li class="dropdown" style="width:16%;height:44px;padding-left:20px;"><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true" 
+        aria-haspopup="true" style="color:white;padding-left:20px">发展动态<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+              
+                <li><a href="news.html">新闻事件</a></li>
+                <li><a href="underConstruction.html">认证地图</a></li>
+                <li><a href="underConstruction.html">阶段目标</a></li>
+                
+            </ul>
+        
+        </li>
+        
+        <li class="dropdown" style="padding-left:0px"><a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="true" data-toggle="dropdown"
+         role="button" style="color:white; padding-left:20px;">示范中心<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="underConstruction.html">认证标准</a></li>
+            <li><a href="underConstruction.html">成果展示</a></li>
+            <li><a href="underConstruction.html">信息化专栏</a></li>
+            </ul>
+        
+        </li>
+        <li class="dropdown" style="width:130px;height:44px;padding-left:20px;"><a href="#" class="dropdown-toggle" aria-haspopup="true" 
+        aria-expanded="true" data-toggle="dropdown" role="button" style="color:white; padding-left:20px">基层胸痛<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+              <li><a href="underConstruction.html">认证标准</a></li>
+                <li><a href="underConstruction.html">基层风采</a></li>
+            </ul>
+        
+        </li>
+         <li class="dropdown" style="width:130px;height:44px;padding-left:20px;"><a href="#" class="dropdown-toggle" aria-haspopup="true" 
+         aria-expanded="true" data-toggle="dropdown" role="button" style="color:white;padding-left:20px;">学习天地<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="underConstruction.html">指南共识</a></li>
+                
+                <li><a href="underConstruction.html">在线学习</a></li>
+               
+                <li><a href="underConstruction.html">下载区</a></li>    
+            </ul>
+        
+        </li>               
+        <li style="padding-left:20px"><a href="aboutus.html" style="color:white;padding-left:20px;">关于我们</a></li>
+    </ul>
+    
+
+</div>
+
+<div id="carousel1" class="carousel slide" data-ride="carousel" style="margin-top:-4px">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel1" data-slide-to="1"></li>
+    <li data-target="#carousel1" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="item active"><img src="img/banner4.png" alt="First slide image" class="center-block">
+      <div class="carousel-caption">2
+        <h3>First slide Heading</h3>
+        <p>First slide Caption</p>
+    </div>
+    </div>
+    <div class="item"><img src="img/banner5.png" alt="Second slide image" class="center-block">
+      <div class="carousel-caption">
+        <h3>Second slide Heading</h3>
+        <p>Second slide Caption</p>
+      </div>
+    </div>
+    <div class="item"><img src="img/banner6.png" alt="Third slide image" class="center-block">
+      <div class="carousel-caption">
+        <h3>Third slide Heading</h3>
+        <p>Third slide Caption</p>
+      </div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#carousel1" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only">前页</span></a><a class="right carousel-control" href="#carousel1" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only">后页</span></a>
+
+</div>
+
+
+
+
+</div>
+<!--header end-->
+  
+<!--content start-->
+<div class="rc-title"><h1>最新日程</h1></div>
+<div class="table">
+<center>
+<table >
+ <tr>  <th width="100" height="30">编号</th>
+      <th width="200">名称</th>
+      <th width="200">时间</th> 
+      <th width="200">地点</th>
+      <th width="200">备注</th> 
+  </tr>
+  <tr>  <td width="1">1</td>
+      <td width="200"> 第八批通过中国胸痛中心认证单位公告</td>
+      <td width="200">2016-7-25</td> 
+      <td width="200">苏州市</td>
+      <td width="200">4</td> 
+  </tr>
+  <tr>  <td width="1">2</td>
+      <td width="200"> 关于接受第九批中国胸痛中心认证申请及第一批中国基层胸痛中心认证申请通知</td>
+      <td width="200">2016-7-25</td> 
+      <td width="200">苏州市</td> 
+      <td width="200">4</td>
+  </tr>
+  <tr>  <td >3</td>
+      <td width="200">关于公示中国胸痛中心示范基地遴选标准中质量控制指标的通知</td>
+      <td width="200">2016-7-25</td> 
+      <td width="200">苏州市</td>
+      <td width="200">4</td> 
+  </tr>
+  <tr>  <td >4</td>
+      <td width="200"> 关于观摩第八批胸痛中心现场核查的通知</td>
+      <td width="200">2016-7-25</td> 
+      <td width="200">苏州市</td>
+      <td width="200">4</td> 
+  </tr>
+    <tr>  <td>5</td> 
+    <td>关于申请中国胸痛中心示范基地的通知</td> 
+    <td>2016-7-25</td>
+    <td width="200">苏州市</td>
+    <td width="200">5</td>  
+     </tr> 
+  <tr>
+      <td>6</td>
+       <td> 初步审核符合第八批申请认证基本条件的单位名单</td> 
+       <td>2016-7-25</td>
+       <td width="200">苏州市</td>
+       <td width="200">4</td>  
+ </tr>
+  <tr>
+      <td>7</td>
+       <td> 第七批通过中国胸痛中心认证单位公告</td> 
+       <td>2016-7-25</td>
+       <td width="200">苏州市</td>
+       <td width="200">4</td>  
+ </tr>
+  </table>
+  </center>
+</div>
+<!--content end-->
+
+<!--footer start-->
+<div id="footer">
+  <div class="link">
+      <ul>
+            <li>相关链接</li>
+            <li><a href="http://csc.cma.org.cn/" target="_parent">中华医学会心血管病分会</a></li>
+            <li><a href="http://www.chhouse.org/" target="_parent">中国心血管健康联盟</a></li>
+      </ul>
+    </div>
+
+  <div class="copyright"><p><!---<span>© 悟提供技术支持：QQ724070605</span>-->京ICP备10010015号-6</p></div>
+  
+</div>
+
+<!--footer end-->
+</div>
+</body>
+</html>

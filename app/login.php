@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
 	
 	if ($items == 1 && !empty($row)) {
 		
-		echo "You have login-ed in.";
+		//echo "You have login-ed in.";
 		$_SESSION['login_user'] = $login_session;
 		
 		// echo $_SESSION['login_user']; ok!

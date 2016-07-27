@@ -1,4 +1,8 @@
+ <?php
 
+require_once('app/login.php');// Start Session and check if have the session stored.
+error_reporting(0);
+?>
 <!doctype html>
 <html>
 <head>
@@ -40,7 +44,47 @@
         
         
     </div>
-	<div class="logo"><a href="index_28.php"><img src="img/logo.png" /></a></div>
+	<div class="logo"><a href="index_28.php"><img src="img/logo.png" width="100%" height="100%"/></a>
+    </div>
+    <div class="title">
+    	<p>中国胸痛中心总部</p>
+    </div>
+     <div style = "float:left; margin:3px 0px 0px 20px">
+		<?php if($_SESSION['login_user']): ?>
+         
+         <a href="profile.php"><i class="glyphicon glyphicon-user"></i>
+       
+         <?php echo $_SESSION['login_user']; ?>
+          </a> <a href="logout.php">登出</a>
+         <?php endif ?>
+           <a href="aboutus.html" style="padding-left:1px">关于我们</a>
+     </div>
+    <div class="search-box">
+
+    
+    	<form class="search-form" id="form" action="#" method="post">
+          <div class="search" style="display:inline">
+                <input type="text" class="form-control" name="country" id="country" onkeyup="suggest(this.value)" 
+                onblur="fill();" value="" autocomplete="off">
+                <button class="btn btn-link search-btn" id="searchSubmit">
+                
+                </button>
+            
+            </div>
+
+        	
+          <div id="suggestions" class="suggestionsBox" style="display:none;">
+            	               
+                <div id="suggestionList" class="suggestionList">
+                &nbsp;
+                </div>
+            </div>
+            
+        </form>
+        
+
+    </div>
+    
 </div>
 
 <div class="mainnav">
@@ -53,7 +97,6 @@
 	<li><a href="underConstruction.html" target="_parent">示范中心</a></li>
 	<li><a href="underConstruction.html" target="_parent">基层胸痛</a></li>
 	<li><a href="underConstruction.html" target="_parent">学习天地</a></li>
-	<li class="nobg"><a href="aboutus.php" target="_parent">关于我们</a></li>
 </ul>
 </div>
 <div id="carousel1" class="carousel slide" data-ride="carousel">
@@ -98,14 +141,14 @@
                 <li><a href="./qualityControl/flowIntro.html" target="content">认证流程介绍</a></li>
                 <li><a href="./qualityControl/aims.html" target="content">认证的目的及意义</a></li>
                 <li><a href="./qualityControl/standards.html" target="content">中国胸痛中心认证标准</a></li>
-                <li><a href="underConstruction.html" target="content">中国胸痛中心认证基层版</a></li>
-                <li><a href="underConstruction.html" target="content">胸痛中心建设流程图</a></li>
-                <li><a href="underConstruction.html" target="content">认证标准和细则下载</a></li>
+                <li><a href="./qualityControl/jiCengBan.html" target="content">中国胸痛中心认证基层版</a></li>
+                <li><a href="./qualityControl/liuChengTu.html" target="content">胸痛中心建设流程图</a></li>
+                <li><a href="./qualityControl/" target="content">认证标准和细则下载</a></li>
                 <hr>
-                <li><a href="underConstruction.html" target="content">监督管理制度</a></li>
+                <li><a href="./qualityControl/guanLiZhiDu.html" target="content">监督管理制度</a></li>
                 <hr>
-                <li><a href="underConstruction.html" target="content">在线机构注册</a></li>
-                <li><a href="underConstruction.html" target="content">认证资质基本条件评估</a></li>
+                <li><a href="registrationForm.php" target="content">在线机构注册</a></li>
+                <li><a href="./qualityControl/tiaoJianPingGu.html" target="content">认证资质基本条件评估</a></li>
                 
                 
                 
@@ -146,7 +189,7 @@
         </ul>
     </div>
 
-	<div class="copyright"><p><!---<span>© 悟提供技术支持：QQ724070605</span>-->京ICP备10010015号-6</p></div>
+	<div class="copyright"><p><!---<span>© 悟提供技术支持：QQ724070605</span>-->苏ICP备10000000号-7</p></div>
 	
 </div>
 

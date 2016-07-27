@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*  质控标准*/
+
+.thr_3 { width:800px;margin-top: 10px; margin-bottom:10px; margin:0 auto ;
+overflow: hidden;}	
+.thr_3 .s_left{ width: 748px; overflow: hidden; padding-top:50px;}
+.thr_3 .s_left h4.h_tit {color:#247A88;font-size:14px;text-indent: 22px;height: 34px;
+line-height: 33px;width: 748px;background:url(../images/top3_l.gif) no-repeat;}
+.thr_3 .s_left h4.h_tit i{color:#1B9831;font-size: 14px;width: 130px;text-align: center;}
+.thr_3 .h_tit  a {float: right;font-weight: lighter;font-size: 12px;color: #356BB1;}
+
+.thr_3 .tab_border thead th {font-size: 12px;color: #2b6eb4;font-weight: bold;line-height: 34px;height: 34px;border-bottom: 1px solid #C1D6EB;}
+.thr_3 .tab_border tbody  td {text-align:left;font-size: 12px;color: #666666;height: 31px;
+line-height: 31px;}
+.td_cont {width: 600px;text-overflow: ellipsis;overflow: hidden;display: inline-block;white-space: nowrap;}
+
+
+.bor {float: left;
+margin-top: -3px;border: 1px solid #CAD7EA;}
