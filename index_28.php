@@ -2,16 +2,16 @@
 
 require_once('app/login.php');// Start Session and check if have the session stored.
 
-if(isset($_SESSION['login_user'])) { // if has the session called 'login_user' then 
+//if(isset($_SESSION['login_user'])) { // if has the session called 'login_user' then 
 									// head to profile.php  
 	
-	echo "ok"; //test
+	//echo "ok"; //test
 	
 //	header('Location:profile.php');
 	
-	}
-else echo "not";	// if not work
-
+//	}
+//else echo "not";	// if not work-->
+error_reporting(0);
 ?>
 <!doctype html>
 <html>
@@ -59,7 +59,7 @@ else echo "not";	// if not work
         
         
     </div>
-	<div class="logo"><a href="http://www.chinastemi.com"><img src="img/logo70.png" width="100%" height="100%"/></a>
+	<div class="logo"><a href="index_28.php"><img src="img/logo70.png" width="100%" height="100%"/></a>
     </div>
     <div class="title">
     	
